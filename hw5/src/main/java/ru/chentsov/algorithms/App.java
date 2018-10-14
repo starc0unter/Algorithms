@@ -13,6 +13,13 @@ public class App {
         else return n * power(n * n, (pow - 1) / 2);
     }
 
+	 /**
+     * Performs disk movement (Hanoi towers problem)
+     * @param a 1st rod
+     * @param b 2nd rod
+     * @param c 3rd rod
+     * @param height amount of disks
+     */
     public static void moveRing(String a, String b, String c, int height) {
         if (height == 0) return;
         moveRing(a, c, b, height - 1);
