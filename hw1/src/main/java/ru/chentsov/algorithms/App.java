@@ -24,9 +24,9 @@ public class App
      */
     private static int power(int n, int pow) {
         powerCounter++;
-        if (pow == 1) return n;
+        if (pow <= 1) return n;
         if (pow % 2 == 0) return power(n * n, pow / 2);
-        else return n * power((n - 1) * (n - 1), pow /2);
+        else return n * power(n * n, (pow - 1) / 2);
     }
 
     /**
